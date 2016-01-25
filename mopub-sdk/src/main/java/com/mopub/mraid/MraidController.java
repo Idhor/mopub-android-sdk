@@ -522,6 +522,9 @@ public class MraidController {
 
                         int[] location = new int[2];
                         View rootView = getRootView();
+                        if (rootView == null) {
+                        	return;
+                        }
                         rootView.getLocationOnScreen(location);
                         mScreenMetrics.setRootViewPosition(location[0], location[1],
                                 rootView.getWidth(),
